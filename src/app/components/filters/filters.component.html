@@ -4,6 +4,6 @@
       <select [(ngModel)]="block_name" name="cars" required>
          <option *ngFor="let block  of blocks_list" value={{block}}>{{ block }}</option>
        </select>
-       <button (click)="onSearch()">Buscar</button>
+       <button (click)="setsSearch()">Buscar</button>
    </div>
 </div>
