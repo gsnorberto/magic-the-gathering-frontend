@@ -1,4 +1,4 @@
-.card-area{
+.card-area {
    width: 200px;
    height: 200px;
    background-color: var(--light);
@@ -8,22 +8,26 @@
    flex-direction: column;
    justify-content: space-between;
    cursor: pointer;
-   &:hover{
+   &:hover {
       opacity: 0.8;
    }
 }
 
-.name{
+.name {
    font-size: 20px;
    font-weight: bold;
 }
 
-.releaseDate{
+.releaseDate {
    display: flex;
    justify-content: flex-end;
 
-   .date{
+   .date {
       padding: 5px 10px;
       border-radius: 5px;
    }
+}
+
+a {
+   color: inherit;
 }

@@ -21,7 +21,7 @@ export class FiltersComponent {
     'Ravnica',
     'Onslaught',
   ];
-  block_name: string = '';
+  block_name: string = 'Amonkhet';
   set_name: string = '';
 
   constructor(private dataService: DataService, private taskService: TaskService) {}

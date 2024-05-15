@@ -6,11 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TaskService {
+  api = 'https://api.magicthegathering.io/v1/sets';
+
   constructor(private http: HttpClient) {}
 
-  getSets(block: string, name?: string): Observable<any> {
-    return this.http.get(
-      `https://api.magicthegathering.io/v1/sets?block=${block}&name=${name}`
-    );
+  getSets(block: string, name?: string) {
+    return this.http.get(`${this.api}?block=${block}&name=${name}`);
+  }
+
+  getBooster(id: string): Observable<any> {
+    return this.http.get(`${this.api}/${id}/booster`);
   }
 }

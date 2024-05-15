@@ -1,0 +1,16 @@
+<div class="cards-area">
+  <div *ngIf="cards && cards.length >= 30" class="cards-content">
+    <app-card
+      *ngFor="let card of cards"
+      [name]="card.name"
+      [manaCost]="card.manaCost"
+      [colorIdentity]="card.colorIdentity[0]"
+      [text]="card.text"
+      [imageUrl]="card.imageUrl"
+    ></app-card>
+  </div>
+
+  <div *ngIf="cards && cards.length < 30" class="loading">
+    <div class="icon">Abrindo os seus boosters...</div>
+  </div>
+</div>

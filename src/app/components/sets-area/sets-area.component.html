@@ -1,5 +1,6 @@
+<app-filters></app-filters>
 <div class="sets-area">
-   <div class="content-area">
-      <app-set *ngFor="let set of setData" [setName]="set.name" [setBlock]="set.block" [setDate]="set.releaseDate"></app-set>
+   <div class="content-area" *ngIf="setData && setData.length > 0">
+      <app-set *ngFor="let set of setData" [setName]="set.name" [setBlock]="set.block" [setDate]="set.releaseDate" [setId]="set.code"></app-set>
    </div>
 </div>

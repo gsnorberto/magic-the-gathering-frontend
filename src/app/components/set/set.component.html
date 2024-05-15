@@ -1,4 +1,4 @@
-<div class="card-area">
+<a class="card-area" routerLink="/cards" [queryParams]="{ id: setId }">
    <div class="title">
       <div class="name">{{setName}}</div>
       <div class="block">{{setBlock}}</div>
@@ -6,4 +6,4 @@
    <div class="releaseDate">
       <div class="date">{{setDate}}</div>
    </div>
-</div>
+</a>
