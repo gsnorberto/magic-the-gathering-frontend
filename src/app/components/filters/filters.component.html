@@ -1,0 +1,9 @@
+<div class="main">
+   <div class="content">
+      <input [(ngModel)]="set_name" type="text" placeholder="Digite o nome..." />
+      <select [(ngModel)]="block_name" name="cars" required>
+         <option *ngFor="let block  of blocks_list" value={{block}}>{{ block }}</option>
+       </select>
+       <button (click)="onSearch()">Buscar</button>
+   </div>
+</div>
