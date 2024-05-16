@@ -18,7 +18,6 @@ export class SetsAreaComponent {
 
   ngOnInit(){
     this.dataService.currentData.subscribe(data => {
-      console.log('data: ', data?.sets);
       this.setData = data?.sets;
     })
   }

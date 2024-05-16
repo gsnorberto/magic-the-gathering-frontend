@@ -1,5 +1,11 @@
 <div class="cards-area">
+  
+  <button mat-icon-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
   <div *ngIf="cards && cards.length >= 30" class="cards-content">
+    
     <app-card
       *ngFor="let card of cards"
       [name]="card.name"
@@ -11,6 +17,10 @@
   </div>
 
   <div *ngIf="cards && cards.length < 30" class="loading">
-    <div class="icon">Abrindo os seus boosters...</div>
+    Carregando os seus boosters
+    <mat-progress-spinner
+      class="black-spinner"
+      mode="indeterminate"
+    ></mat-progress-spinner>
   </div>
 </div>
