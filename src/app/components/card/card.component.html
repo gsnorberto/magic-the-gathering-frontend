@@ -1,11 +1,17 @@
 <div class="card-area">
    <div class="column-1">
-      <img src="{{imageUrl}}" alt="asdf">
+      <img class="image" src="{{imageUrl}}" alt="image">
       <div class="content">
          <div class="name">{{name}}</div>
          <div class="mana-coast">{{manaCost}}</div>
          <div class="text">{{text}}</div>
       </div>
    </div>
-   <div class="color">{{colorIdentity}}</div>
+   <div class="color">
+      <img class="icon" *ngIf="colorIdentity === 'U'" src="assets/icons/U-Island.webp" alt="Icon">
+      <img class="icon" *ngIf="colorIdentity === 'B'" src="assets/icons/B-Swamp.webp" alt="Icon">
+      <img class="icon" *ngIf="colorIdentity === 'R'" src="assets/icons/R-Mountain.webp" alt="Icon">
+      <img class="icon" *ngIf="colorIdentity === 'G'" src="assets/icons/G-Forest.png" alt="Icon">
+      <div *ngIf="colorIdentity != 'U' && colorIdentity != 'B' && colorIdentity != 'R' && colorIdentity != 'G'">{{colorIdentity}}</div>
+   </div>
 </div>

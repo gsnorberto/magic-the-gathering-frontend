@@ -4,25 +4,25 @@
    background-color: var(--light);
    border-radius: 5px;
    padding: 20px;
-   
    display: flex;
    justify-content: space-between;
-
-   .column-1{
-      display: flex;
-   }
-   
-   .text{
-      overflow: hidden;
-      text-overflow: ellipsis;
-   }
-
-   img{
-      height: 100%;
-      width: auto;
-      margin-right: 20px;
-   }
 }
+
+.column-1{
+   display: flex;
+}
+
+.text{
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.image{
+   height: 100%;
+   width: auto;
+   margin-right: 20px;
+}
+
 
 .content {
    display: flex;
